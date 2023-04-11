@@ -21,10 +21,10 @@ def recommend(movie): # In this function if you will give it one movie it will r
             recommended_movies_posters.append(fetch_poster(movie_id)) # fetch poster from API
         return recommended_movies,recommended_movies_posters
 
-movies_dict = pickle.load(open("C:\\Users\\princ\\Downloads\\movies_dict_model_wellpre.sav",'rb'))
+movies_dict = pickle.load(open("movies_dict_model_wellpre.sav",'rb'))
 movies = pd.DataFrame(movies_dict)
 
-similarity=pickle.load(open("C:\\Users\\princ\\Downloads\\similarity_model_pre.sav",'rb'))
+similarity=pickle.load(open("similarity_model_pre.sav",'rb'))
 st.title("Movie Recommender System")
 
 selected_movie_name = st.selectbox('since you have watched this',movies['title'].values)
