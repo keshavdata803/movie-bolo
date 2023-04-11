@@ -27,7 +27,7 @@ movies = pd.DataFrame(movies_dict)
 similarity=pickle.load(open("similarity_model_pre.sav",'rb'))
 st.title("Movie Recommender System")
 
-selected_movie_name = st.selectbox('since you have watched this',movies['title'].values)
+selected_movie_name = st.selectbox('Since You Have Watched this',movies['title'].values)
 
 if st.button('Recommend'):
     names,posters = recommend(selected_movie_name)
